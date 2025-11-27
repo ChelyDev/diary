@@ -3,7 +3,7 @@ Projeto de um diário pessoal.
 
 # explicações
 
-# 📔 API Diário Pessoal (Trabalho Prático)
+# API Diário Pessoal (Trabalho Prático)
 
 API RESTful desenvolvida para gerenciamento de um diário pessoal. O sistema permite que usuários criem contas, façam login e gerenciem suas próprias anotações de forma segura e privada.
 
@@ -22,7 +22,7 @@ API RESTful desenvolvida para gerenciamento de um diário pessoal. O sistema per
 
 ---
 
-## 🚀 Funcionalidades
+##  Funcionalidades
 
 * ✅ **Cadastro de Usuários:** Criação de conta com email e senha.
 * ✅ **Autenticação:** Login seguro retornando Token de acesso (Bearer).
@@ -36,7 +36,7 @@ API RESTful desenvolvida para gerenciamento de um diário pessoal. O sistema per
 
 ---
 
-## 📚 Como Usar a API (Documentação)
+##  Como Usar a API (Documentação)
 
 A API possui documentação interativa (Swagger UI). Siga os passos abaixo para testar:
 
@@ -50,7 +50,7 @@ A API possui documentação interativa (Swagger UI). Siga os passos abaixo para 
 * Informe o email e senha cadastrados.
 * Copie o código gigante que aparece no campo `"access_token"`.
 
-### 3. Autenticar no Swagger 🔐
+### 3. Autenticar no Swagger 
 * No topo da página, clique no botão **Authorize** (cadeado).
 * Cole o token copiado na caixa de texto.
 * Clique em **Authorize** e depois **Close**.
@@ -101,7 +101,7 @@ Se quiser rodar o projeto na sua máquina (vou deixar anotado pra eu não esquec
 
 ---
 
-## 📋 Estrutura do Banco de Dados (Supabase)
+##  Estrutura do Banco de Dados (Supabase)
 
 Tabela `diario`:
 * `id`: int8 (Primary Key)

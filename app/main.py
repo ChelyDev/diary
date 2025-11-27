@@ -42,12 +42,12 @@ class NotaDB(NotaSchema):
     user_id: str  #ID do dono da nota
 
 #DEPENDÊNCIA DE SEGURANÇA
-# Essa função mágica pega o Token do usuário e cria um cliente Supabase específico para ele.
+# Essa função pega o Token do usuário e cria um cliente Supabase específico para ele.
 # Isso garante que as Regras de Segurança (RLS) funcionem.
 def get_user_supabase(cred: HTTPAuthorizationCredentials = Depends(security)):
     token = cred.credentials
     try:
-        #Cria um cliente novo e "loga" ele com o token recebido
+        #Cria um cliente novo e loga ele com o token recebido
         client = create_client(SUPABASE_URL, SUPABASE_KEY)
         client.auth.set_session(access_token=token, refresh_token=token)
         return client
@@ -102,7 +102,7 @@ def buscar_nota(nota_id: int, client: Client = Depends(get_user_supabase)):
 @app.post("/notas", status_code=201, response_model=NotaDB)
 def criar_nota(nota: NotaSchema, client: Client = Depends(get_user_supabase)):
     try:
-        # O user_id é preenchido automaticamente pelo banco (default auth.uid())
+        #O user_id é preenchido automaticamente pelo banco (default auth.uid())
         response = client.table("diario").insert({
             "data": nota.data,
             "texto": nota.texto
